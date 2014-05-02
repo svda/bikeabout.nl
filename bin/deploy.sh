@@ -7,10 +7,11 @@
 # Set the DEPLOY_KEY environment variable if you want to specify an SSH key to
 # connect with.
 
-PROJECT='sandervandenakker.nl'
+REMOTE_HOST='bikeabout.nl'
+REMOTE_PATH='bikeabout.nl'
 
-REMOTE=$1
-BRANCH=$2
+GIT_REMOTE=$1
+GIT_BRANCH=$2
 
-git push $REMOTE $BRANCH
-ssh -i $DEPLOY_KEY ec2-user@$PROJECT "cd $PROJECT; git pull $REMOTE $BRANCH;"
+git push $GIT_REMOTE $GIT_BRANCH
+ssh -i $DEPLOY_KEY ec2-user@$REMOTE_HOST "cd $REMOTE_PATH; git pull $REMOTE_PATH $GIT_BRANCH;"
