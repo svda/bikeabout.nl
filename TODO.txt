@@ -1,0 +1,3 @@
+- Keyboard mapping / shortcuts
+- SEO meta: http://manuel-schoebel.com/blog/meteor-and-seo
+- GA code

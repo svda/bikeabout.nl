@@ -1,0 +1,28 @@
+<template name="home">
+  {{> homeBackground}}
+  <main id="content" class="masthead" role="main">
+    <div class="container">
+      <h1>Bikeabout <small>(bɪkˈə-boutˈ)</small></h1>
+      <p class="lead">To disconnect from regular life for a period of wandering.<br />
+        Preferably by bicycle.</p>
+      {{> homeCountdown}}
+    </div>
+  </main>
+</template>
+
+<template name="homeBackground">
+  <div class="crossfade">
+    <div class="item active" style="background-image: url('/images/home/carousel_2.jpg')"></div>
+    <div class="item" style="background-image: url('/images/home/carousel_1.jpg')"></div>
+    <div class="item" style="background-image: url('/images/home/carousel_3.jpg')"></div>
+  </div>
+</template>
+
+<template name="homeCountdown">
+  <div class="countdown">
+    <span class="item"><span class="counter">{{countdown.days}}</span> days</span>
+    <span class="item"><span class="counter">{{countdown.hours}}</span> hours</span>
+    <span class="item"><span class="counter">{{countdown.minutes}}</span> minutes</span>
+    <span class="item"><span class="counter">{{countdown.seconds}}</span> seconds</span>
+  </div>
+</template>

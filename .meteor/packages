@@ -1,0 +1,25 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+jquery
+backbone
+underscore
+spiderable
+coffeescript
+c2o-core
+c2o-tracker
+c2o-module
+c2o-content
+c2o-tumblrfeed
+moment
+standard-app-packages
+iron-router
+less
+percolatestudio-migrations
+accounts-password
+accounts-ui
+c2o-seo
+spin
+c2o-gpslogger

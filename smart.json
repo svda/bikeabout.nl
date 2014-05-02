@@ -1,0 +1,34 @@
+{
+  "packages": {
+    "c2o-core": {
+      "git": "https://github.com/click2open/c2o-core.git",
+      "branch": "master"
+    },
+    "c2o-seo": {
+      "git": "https://github.com/click2open/c2o-seo.git",
+      "branch": "master"
+    },
+    "c2o-module": {
+      "git": "https://github.com/click2open/c2o-module.git",
+      "branch": "master"
+    },
+    "c2o-tracker": {
+      "git": "https://github.com/click2open/c2o-tracker.git",
+      "branch": "master"
+    },
+    "c2o-content": {
+      "git": "https://github.com/click2open/c2o-content.git",
+      "branch": "master"
+    },
+    "c2o-tumblrfeed": {
+      "git": "https://github.com/click2open/c2o-tumblrfeed.git",
+      "branch": "master"
+    },
+    "c2o-gpslogger": {
+      "git": "https://github.com/click2open/c2o-gpslogger.git",
+      "branch": "master"
+    },
+    "percolatestudio-migrations": {},
+    "spin": {}
+  }
+}
