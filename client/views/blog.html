@@ -1,0 +1,21 @@
+<template name="tumblrFeedIndex">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="subhead">
+        <h1>Blog</h1>
+      </div>
+    </div>
+  </div>
+  <div id="tumblrfeed-container" class="container">
+    <div class="row">
+      <div class="list animated col-sm-9">
+        {{#each posts}}
+          {{> tumblrFeedTeaser}}
+        {{/each}}
+      </div>
+      <div class="col-sm-3">
+        {{> tumblrFeedTags}}
+      </div>
+    </div>
+  </div>
+</template>
