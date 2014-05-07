@@ -292,6 +292,12 @@ body.menu-open {
   }
 }
 
+body.hide-hints {
+  .hint {
+    display: none;
+  }
+}
+
 .masthead {
   h1 {
     font-size: 48px;
@@ -315,7 +321,7 @@ body.menu-open {
   .btn-inverse;
 }
 
-#icons-home i {
+#icons-body i {
   float: left;
   margin: 0 10px 10px 0;
   width: 64px;
@@ -409,6 +415,16 @@ body.menu-open {
 
 .view-home {
 
+  #menu-hint {
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    width: 100px;
+    height: 100px;
+    background: url('/images/menu-hint.png');
+    z-index: 2;
+  }
+
   .crossfade {
     position: fixed;
     left: 0;
@@ -442,7 +458,7 @@ body.menu-open {
     }
     h1 {
       margin-top: 80px;
-      font-size: 72px;
+      font-size: 60px;
       font-weight: 500;
       line-height: 80px;
       color: #fff;
