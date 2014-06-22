@@ -2,16 +2,16 @@
 	"folders":
 	[
 		{
-			"path": "/Users/sander/var/www/bikeabout.nl"
+			"path": "/Users/sander/www/bikeabout.nl"
 		},
 		{
 			"path": "/usr/local/var/www/meteor/master"
 		},
 		{
-			"path": "/Users/sander/var/www/meteor/packages"
+			"path": "/Users/sander/www/meteor/packages"
 		},
 		{
-			"path": "/Users/sander/var/www/meteor"
+			"path": "/Users/sander/www/meteor"
 		}
 	]
 }

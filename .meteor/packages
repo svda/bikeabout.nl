@@ -8,11 +8,6 @@ backbone
 underscore
 spiderable
 coffeescript
-c2o-core
-c2o-tracker
-c2o-module
-c2o-content
-c2o-tumblrfeed
 moment
 standard-app-packages
 iron-router
@@ -20,6 +15,12 @@ less
 percolatestudio-migrations
 accounts-password
 accounts-ui
-c2o-seo
 spin
-c2o-gpslogger
+http
+c2o-core
+c2o-tracker
+c2o-module
+c2o-content
+c2o-seo
+c2o-tumblrfeed
+c2o-triplogger
