@@ -24,8 +24,8 @@
       "git": "https://github.com/click2open/c2o-tumblrfeed.git",
       "branch": "master"
     },
-    "c2o-gpslogger": {
-      "git": "https://github.com/click2open/c2o-gpslogger.git",
+    "c2o-triplogger": {
+      "git": "https://github.com/click2open/c2o-triplogger.git",
       "branch": "master"
     },
     "percolatestudio-migrations": {},
