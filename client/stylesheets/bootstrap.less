@@ -110,8 +110,7 @@ time {
 }
 
 .jumbotron {
-  color: #EFEFEF;
-  background-color: #333;
+  color: #121212;
   @media (max-width: @screen-sm) {
     padding: 30px 0;
   }
@@ -202,20 +201,20 @@ body {
 
   ul {
     position: absolute;
-    left: 50%;
-    top: 10%;
+    top: 50%;
+    width: 25%;
     margin: 0;
     padding: 0;
     list-style: none;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 
     > li {
-      float: left;
-      margin: 0 10px;
+      margin: 10px 0;
+      text-align: center;
 
       > a {
         display: block;
@@ -284,11 +283,11 @@ body.menu-open {
   }
   #washi,
   #shoji {
-    -webkit-transform: translate3d(0, 20%, 0) scale(0.85);
-    -moz-transform: translate3d(0, 20%, 0) scale(0.85);
-    -o-transform: translate3d(0, 20%, 0) scale(0.85);
-    -ms-transform: translate3d(0, 20%, 0) scale(0.85);
-    transform: translate3d(0, 20%, 0) scale(0.85);
+    -webkit-transform: translate3d(20%, 0, 0) scale(0.85);
+    -moz-transform: translate3d(20%, 0, 0) scale(0.85);
+    -o-transform: translate3d(20%, 0, 0) scale(0.85);
+    -ms-transform: translate3d(20%, 0, 0) scale(0.85);
+    transform: translate3d(20%, 0, 0) scale(0.85);
   }
 }
 
@@ -461,7 +460,20 @@ body.hide-hints {
 
   main {
     position: relative;
+    height: 100%;
     z-index: 2;
+  }
+
+  .dashboard-block {
+    margin: 0;
+  }
+
+  .second-row .dashboard-block {
+    height: 25vh;
+  }
+
+  .first-row .dashboard-block {
+    height: 50vh;
   }
 
   .countdown {
