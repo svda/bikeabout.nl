@@ -17,9 +17,7 @@ $.fn.crossfade = function (options) {
     $current = $next;
   }
 
-  Meteor.setInterval( function () {
-    fade() }, options.interval
-  )
+  Meteor.setInterval( function () { fade() }, options.interval );
 
 }
 
@@ -27,29 +25,15 @@ Template.homeBackground.rendered = function () {
   $('.crossfade').crossfade();
 };
 
-Template.homeCountdown.helpers({
-  countdown: function () {
-    countdown();
-    Meteor.setInterval(countdown, 1000);
-    return Session.get('countdown_timer');
+Template.home.events({
+  'click a.anchor': function (e) {
+    e.preventDefault();
+    var target = $(e.currentTarget).attr("href");
+    console.log(target);
+    var destination = $(target).offset().top;
+    $("#shoji").animate({
+        scrollTop: destination
+    }, 300, 'swing' );
+    return false;
   }
 });
-
-// Helpers
-
-function countdown () {
-  var now = moment(),
-  then = moment([2014, 6, 1]).subtract('months', 1);
-  ms = then.diff(now, 'milliseconds', true);
-  days = Math.floor(moment.duration(ms).asDays());
-  then = then.subtract('days', days);
-  ms = then.diff(now, 'milliseconds', true);
-  hours = Math.floor(moment.duration(ms).asHours());
-  then = then.subtract('hours', hours);
-  ms = then.diff(now, 'milliseconds', true);
-  minutes = Math.floor(moment.duration(ms).asMinutes());
-  then = then.subtract('minutes', minutes);
-  ms = then.diff(now, 'milliseconds', true);
-  seconds = Math.floor(moment.duration(ms).asSeconds());
-  Session.set( 'countdown_timer', { days: days, hours: hours, minutes: minutes, seconds: seconds } );
-}

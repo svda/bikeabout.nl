@@ -6,9 +6,15 @@
       <h1>Bikeabout <small>\bɪkˈə-boutˈ\</small></h1>
       <p class="lead"><i>(noun)</i> To disconnect from regular life for a period of wandering.<br />
         Preferably by bicycle.</p>
-      {{> homeCountdown}}
+    </div>
+    <div class="bottom">
+      <div class="container">
+        <p class="lead">In June Sander and Janneke set out for a bicycle trip to the east. This is our travelogue.</p>
+        <a id="dashboard-anchor" class="anchor" href="#dashboard"><i class="icon-arrow-down"></i></a>
+      </div>
     </div>
   </main>
+  {{> homeDashboard}}
 </template>
 
 <template name="homeBackground">
@@ -18,11 +24,29 @@
   </div>
 </template>
 
-<template name="homeCountdown">
-  <div class="countdown">
-    <span class="item"><span class="counter">{{countdown.days}}</span> days</span>
-    <span class="item"><span class="counter">{{countdown.hours}}</span> hours</span>
-    <span class="item"><span class="counter">{{countdown.minutes}}</span> minutes</span>
-    <span class="item"><span class="counter">{{countdown.seconds}}</span> seconds</span>
+<template name="homeDashboard">
+  <div id="dashboard">
+    <div class="container-fluid">
+      <div class="row first-row">
+        {{> tumblrFeedDashboardBlock}}
+        {{> tripLoggerDashboardBlock}}
+      </div>
+      {{!
+      <div class="row second-row">
+        <div class="block dashboard-block col-sm-3">
+          <h4>Total distance</h4>
+        </div>
+        <div class="block dashboard-block col-sm-3">
+          <h4># days on the road</h4>
+        </div>
+        <div class="block dashboard-block col-sm-3">
+          <h4># flats</h4>
+        </div>
+        <div class="block dashboard-block col-sm-3">
+          <h4>...</h4>
+        </div>
+      </div>
+      }}
+    </div>
   </div>
 </template>

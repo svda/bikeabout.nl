@@ -5,25 +5,70 @@
 
 @gray-lightest:         #F4F4F4;
 
-@brand-primary:         #FF7700;
-
 @orange:                #FF7700;
 @orange-light:          lighten(@orange, 10%);
 @yellow:                #FFCC00;
 @yellow-light:          lighten(@yellow, 10%);
 @yellow-lighter:        lighten(@yellow, 43%);
 
-@link-color:            @orange;
-@btn-primary-bg:        @orange;
-@btn-primary-bg-hl:     darken(@btn-primary-bg, 10%);
+@blue:                  #415ba9;
+@blue-light:            #6b80bf;
+@blue-lightest:         #a2b2db;
 
-@sidebar-color:         #CCCCCC;
-@sidebar-bg:            #454545;
+@green:                 #45b649;
+@green-lighter:         #a1d290;
+@green-lightest:        #c8e2a9;
+
+@brand-primary:         @blue;
+@brand-secondary:       @green;
+
+@link-color:            @brand-primary;
+@btn-primary-bg:        @brand-primary;
+@btn-primary-bg-hl:     darken(@btn-primary-bg, 10%);
 
 @font-size-base:        15px;
 @font-family-sans-serif: 'Source Sans Pro';
 
 // Custom mixins
+
+.interface-btn(@color: @brand-primary) {
+  display: inline-block;
+  min-width: 40px;
+  line-height: 40px;
+  padding: 0 6px;
+  color: lighten(@color, 40%);
+  background-color: @color;
+  .transition(all .2s linear);
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.interface-menu {
+  padding-top: 80px;
+
+  a {
+    display: block;
+    padding: 0 8px;
+    line-height: 30px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.active,
+    &.active:hover {
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .interface-menu {
+    height: 100vh;
+  }
+}
 
 .cover {
   position: absolute;
@@ -80,8 +125,7 @@ a.block {
   display: block;
   margin: 10px -10px;
   padding: 10px;
-  border-radius: 5px;
-  .link(@text-color, @text-color);
+  color: #121212;
   .clearfix();
 
   h4 {
@@ -131,7 +175,7 @@ blockquote {
   margin-bottom: 0;
   font-size: 24px;
   font-style: italic;
-  border-left-color: @orange;
+  border-left-color: @brand-primary;
 }
 
 h1 > small {
@@ -144,6 +188,10 @@ h1 > small {
   font-weight: 300;
   font-size: 24px;
   line-height: 36px;
+}
+
+.page-header {
+  margin-top: 60px;
 }
 
 // Layout
@@ -160,13 +208,13 @@ body {
   height: 40px;
   margin-left: -50px;
   z-index: 100;
-  background-color: @orange;
+  background-color: @brand-primary;
 }
 
 #layout {
   .cover;
-  background: #454545;
-  background-size: cover;
+  background: #454545 url(/images/layout_bg.png) repeat;
+  //background-size: cover;
   overflow: hidden;
 }
 
@@ -205,6 +253,8 @@ body {
     width: 25%;
     margin: 0;
     padding: 0;
+    padding-top: 200px;
+    background: url(/images/layout_logo.png) center top no-repeat;
     list-style: none;
     -webkit-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
@@ -268,7 +318,7 @@ body {
 }
 
 .back-btn {
-  .btn-inverse;
+  //.btn-inverse;
 }
 
 @media (min-width: @screen-sm-min) {
@@ -464,6 +514,23 @@ body.hide-hints {
     z-index: 2;
   }
 
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  #dashboard-anchor {
+    clear: both;
+    font-size: 40px;
+    color: #fff;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   .dashboard-block {
     margin: 0;
   }
@@ -476,25 +543,60 @@ body.hide-hints {
     height: 50vh;
   }
 
-  .countdown {
-    margin: 100px 0;
-    .item {
-      display: inline-block;
-      min-width: 50px;
-      margin-right: 10px;
-      padding: 5px;
-      font-size: 11px;
-      text-align: center;
-      color: #333;
+}
+
+#tumblrfeed {
+  .back-btn {
+    .interface-btn(@green);
+  }
+  .jumbotron {
+    color: #fff;
+    background-color: @green;
+  }
+}
+
+.view-viewTumblrFeedPost {
+  .post-header {
+    position: fixed;
+    top: 0;
+    left: 40px;
+    right: 0;
+  }
+}
+
+#triplogger {
+  .map-btn {
+    .interface-btn(@blue);
+  }
+  .map-index {
+    background-color: @blue;
+
+    a {
+      color: #fff;
+    }
+
+    a.active {
+      color: @blue;
       background-color: #fff;
-      border-radius: 3px;
-      .transition(opacity 2s ease-in-out);
-      .counter {
-        display: block;
-        clear: both;
-        font-size: 24px;
-      }
     }
   }
+  .map-details {
+    h2 {
+      margin: 0;
+      padding: 4px 8px;
+      font-size: 18px;
+      color: #454545;
+      background-color: #d8d8d8;
+    }
+  }
+}
 
+#triplogger-dashboard-block {
+  color: #fff;
+  background-color: @blue;
+}
+
+#tumblrfeed-dashboard-block {
+  color: #fff;
+  background-color: @green;
 }
