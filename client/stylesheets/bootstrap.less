@@ -19,8 +19,13 @@
 @green-lighter:         #a1d290;
 @green-lightest:        #c8e2a9;
 
+@red:                   #d42027;
+@red-lighter:           #e64a50;
+@red-lightest:          #f1797e;
+
 @brand-primary:         @blue;
 @brand-secondary:       @green;
+@brand-tertiary:        @red;
 
 @link-color:            @brand-primary;
 @btn-primary-bg:        @brand-primary;
@@ -197,7 +202,7 @@ h1 > small {
 // Layout
 
 body {
-
+  background: #454545 url(/images/layout_bg.png) repeat;
 }
 
 #loading {
@@ -213,8 +218,8 @@ body {
 
 #layout {
   .cover;
-  background: #454545 url(/images/layout_bg.png) repeat;
-  //background-size: cover;
+  background: url(/images/layout_logo.png) 20px 40px no-repeat;
+  background-size: 30%;
   overflow: hidden;
 }
 
@@ -242,10 +247,6 @@ body {
   background-size: 24px 24px;
   cursor: pointer;
   z-index: 10;
-}
-
-#primary-menu {
-  background: url(/images/layout_logo.png) 20px 40px no-repeat;
 }
 
 .menu {
@@ -497,15 +498,23 @@ body.hide-hints {
     }
   }
 
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 30px;
+  }
+
   @media (min-width: @screen-sm-min) {
     .masthead {
       h1 {
         font-size: 100px;
         line-height: 120px;
       }
-      .lead {
-        font-size: 30px;
-      }
+    }
+    .lead {
+      font-size: 30px;
     }
   }
 
@@ -513,13 +522,6 @@ body.hide-hints {
     position: relative;
     height: 100%;
     z-index: 2;
-  }
-
-  .bottom {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 10px;
-    width: 100%;
   }
 
   #dashboard-anchor {
