@@ -14,4 +14,4 @@ GIT_REMOTE=$1
 GIT_BRANCH=$2
 
 git push $GIT_REMOTE $GIT_BRANCH
-ssh -i $DEPLOY_KEY ec2-user@$REMOTE_HOST "cd $REMOTE_PATH; git pull $GIT_REMOTE $GIT_BRANCH; ./bin/update.sh"
+ssh -i $DEPLOY_KEY ec2-user@$REMOTE_HOST "cd $REMOTE_PATH; git pull $GIT_REMOTE $GIT_BRANCH; sudo ./bin/update.sh"
