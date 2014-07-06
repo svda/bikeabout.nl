@@ -29,7 +29,6 @@ Template.home.events({
   'click a.anchor': function (e) {
     e.preventDefault();
     var target = $(e.currentTarget).attr("href");
-    console.log(target);
     var destination = $(target).offset().top;
     $("#shoji").animate({
         scrollTop: destination
