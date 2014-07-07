@@ -158,15 +158,21 @@ time {
   .box-shadow(0 1px 0 rgba(0, 0, 0, 0.1));
 }
 
-.jumbotron {
-  color: #121212;
-  @media (max-width: @screen-sm) {
-    padding: 30px 0;
-  }
-}
-
 .header {
   margin-top: 0;
+}
+
+#loading {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  width: 100%;
+  height: 100%;
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
 }
 
 // Type
@@ -555,6 +561,10 @@ body.hide-hints {
   .jumbotron {
     color: #fff;
     background-color: @green;
+
+    a {
+      color: #fff;
+    }
   }
 }
 
