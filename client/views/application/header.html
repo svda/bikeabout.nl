@@ -1,6 +1,7 @@
 <template name="header">
   <header>
     <a id="primary-menu-btn" class="menu-btn"></a>
+    {{> errors}}
     {{#if show_login}}
       {{> _loginButtons}}
     {{/if}}
