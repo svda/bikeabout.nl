@@ -59,6 +59,30 @@
   }
 }
 
+.interface-btn-inverse(@color: @brand-primary) {
+  display: inline-block;
+  min-width: 38px;
+  line-height: 38px;
+  padding: 0 6px;
+  color: @color;
+  background-color: #fff;
+  border: solid 1px @color;
+  .transition(all .2s linear);
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: @color;
+  }
+
+  i {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    top: 3px;
+  }
+}
+
 .interface-menu {
   padding-top: 80px;
 
@@ -136,7 +160,7 @@
 a.block {
   position: relative;
   display: block;
-  margin: 20px -10px;
+  margin-bottom: 20px;
   padding: 10px;
   color: #121212;
   background-color: #fff;
@@ -385,7 +409,11 @@ body.hide-hints {
 }
 
 .tag {
-  .btn-inverse;
+  .interface-btn-inverse(@blue);
+  margin-bottom: 5px;
+  &.selected {
+    .interface-btn(@blue);
+  }
 }
 
 #icons-body i {
@@ -566,9 +594,6 @@ body.hide-hints {
 
 #tumblrfeed {
   background-color: @gray-lightest;
-  .back-btn {
-    .interface-btn(@green);
-  }
   .jumbotron {
     color: #fff;
     background-color: @green;
@@ -577,8 +602,24 @@ body.hide-hints {
       color: #fff;
     }
   }
+  .teaser {
+    .media img {
+      width: 100%;
+    }
+  }
   .header {
     min-height: 50px;
+    i {
+      color: #fff;
+      background-color: @gray;
+    }
+  }
+  .date {
+    line-height: 40px;
+    margin: 0 10px;
+  }
+  .media {
+    margin-top: 0;
   }
   .caption {
     margin: 10px 0;
@@ -592,9 +633,14 @@ body.hide-hints {
     color: @gray-lighter;
     .transition(all .2s linear);
   }
-
+  .post-footer {
+    margin-top: 10px;
+  }
   a.block:hover .readmore {
     color: @green;
+  }
+  .loadmore-btn {
+    .interface-btn(@blue);
   }
 }
 
@@ -602,11 +648,9 @@ body.hide-hints {
   .menu-btn {
     background-color: @green;
   }
-  .post-header {
-    position: fixed;
-    top: 0;
-    left: 40px;
-    right: 0;
+  .back-btn {
+    .interface-btn(@green);
+    margin-left: 40px;
   }
 }
 
