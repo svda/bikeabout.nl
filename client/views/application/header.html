@@ -1,8 +1,8 @@
 <template name="header">
   <header>
     <a id="primary-menu-btn" class="menu-btn"></a>
-    {{#if show_login}}
-      {{> _loginButtons}}
-    {{/if}}
+    <div class="pull-right">
+		{{> loginButtons align="right"}}
+    </div>
   </header>
 </template>

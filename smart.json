@@ -28,7 +28,8 @@
       "git": "https://github.com/click2open/c2o-triplogger.git",
       "branch": "master"
     },
-    "percolatestudio-migrations": {},
-    "spin": {}
+    "iron-router": {},
+    "iron-router-progress": {},
+    "percolatestudio-migrations": {}
   }
 }
