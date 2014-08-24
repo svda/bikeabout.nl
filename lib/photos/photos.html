@@ -1,0 +1,35 @@
+<template name="photos">
+  <article id="photos">
+    <div class="jumbotron">
+      <div class="container">
+        <div class="subhead">
+          <h1>Photos</h1>
+          <p class="lead"></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+		<h1>Photos</h1>
+		{{#each items}}
+			{{> thumbnail}}
+		{{/each}}
+	</div>
+  </article>
+</template>
+
+<template name="thumbnail">
+	<a id="thumbnail-{{id}}" class="thumbnail" href="/photo/{{id}}">
+		<img src="{{thumbnailLink}}" />
+		<div class="description">
+			{{description}}
+		</div>
+	</a>
+</template>
+
+<template name="photo">
+	<div id="photo" style="background-image: url('{{viewUrl}}')">
+		<div class="description">
+			{{description}}
+		</div>
+	</div>
+</template>

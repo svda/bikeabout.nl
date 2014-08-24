@@ -112,6 +112,8 @@
   left: 0;
   width: auto;
   height: auto;
+  background-position: center;
+  background-size: cover;
 }
 
 .link(@color: @link-color, @hover-color: darken(@link-color, 10%)) {
@@ -675,6 +677,17 @@ body.hide-hints {
       color: #454545;
       background-color: #d8d8d8;
     }
+  }
+}
+
+#photo {
+  .cover;
+  .description {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px;
+    color: #fff;
+    background-color: #121212;
   }
 }
 
