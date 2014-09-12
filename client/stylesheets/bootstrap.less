@@ -64,7 +64,7 @@
   line-height: 40px;
   padding: 0 6px;
   color: @color;
-  background-color: #fff;
+  background-color: @gray-lightest;
   .transition(all .2s linear);
 
   &:hover {
@@ -224,6 +224,10 @@ blockquote {
   font-size: 24px;
   font-style: italic;
   border-left-color: @brand-primary;
+}
+
+h1 {
+  margin-top: 42px;
 }
 
 h1 > small {
@@ -594,7 +598,6 @@ body.hide-hints {
 }
 
 #tumblrfeed {
-  background-color: @gray-lightest;
   .jumbotron {
     color: #fff;
     background-color: @green;
@@ -615,10 +618,6 @@ body.hide-hints {
       background-color: @gray;
     }
   }
-  .date {
-    line-height: 40px;
-    margin: 0 10px;
-  }
   .media {
     margin-top: 0;
   }
@@ -627,10 +626,10 @@ body.hide-hints {
     color: #454545;
   }
   .readmore {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 40px;
+    float: right;
+    clear: right;
+    padding-top: 10px;
+    font-size: 24px;
     color: @gray-lighter;
     .transition(all .2s linear);
   }
@@ -643,6 +642,16 @@ body.hide-hints {
   .loadmore-btn {
     .interface-btn(@blue);
   }
+  .post-header {
+    float: right;
+    color: @gray-light;
+  }
+}
+
+.view-viewTumblrFeed {
+  #tumblrfeed {
+    background-color: @gray-lightest;
+  }
 }
 
 .view-viewTumblrFeedPost {
@@ -650,8 +659,13 @@ body.hide-hints {
     background-color: @green;
   }
   .back-btn {
+  display: block;
+    clear: left;
     .interface-btn(@green);
-    margin-left: 40px;
+
+    i {
+      top: 4px;
+    }
   }
 }
 

@@ -18,8 +18,6 @@ accounts-password
 http
 c2o-core
 c2o-tracker
-c2o-module
-c2o-content
 c2o-seo
 c2o-tumblrfeed
 c2o-triplogger

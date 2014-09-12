@@ -8,7 +8,6 @@ backbone@1.0.0
 binary-heap@1.0.0
 blaze-tools@1.0.0
 blaze@2.0.0
-c2o-content@0.0.0
 c2o-core@0.0.0
 c2o-googleapis@0.0.0
 c2o-module@0.0.0
