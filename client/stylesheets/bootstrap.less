@@ -202,6 +202,8 @@ time {
 
 .jumbotron {
   padding: 20px 10px;
+  color: #fff;
+  background-color: #121212;
 }
 
 @media (min-width: @screen-sm-min) {
@@ -680,8 +682,27 @@ body.hide-hints {
   }
 }
 
+#photos {
+  background-color: #121212;
+  .clearfix();
+
+  .preview {
+    img {
+      max-width: 220px;
+      max-height: 140px;
+    }
+  }
+
+}
+
 #photo {
   .cover;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  cursor: pointer;
+  .transition(all .2s linear);
+
   .description {
     position: absolute;
     bottom: 20px;
@@ -689,6 +710,11 @@ body.hide-hints {
     color: #fff;
     background-color: #121212;
   }
+}
+
+#photo.visible {
+  opacity: 100;
+  z-index: 10;
 }
 
 #triplogger-dashboard-block {

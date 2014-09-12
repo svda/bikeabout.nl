@@ -28,7 +28,13 @@
       "git": "https://github.com/click2open/c2o-triplogger.git",
       "branch": "master"
     },
-    "iron-router": "0.8.2",
+    "c2o-googleapis": {
+      "git": "https://github.com/click2open/c2o-googleapis.git",
+      "branch": "master"
+    },
+    "iron-router": {
+      "git": "https://github.com/EventedMind/iron-router"
+    },
     "iron-router-progress": {},
     "percolatestudio-migrations": {}
   }

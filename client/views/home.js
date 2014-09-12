@@ -1,3 +1,9 @@
+/**
+ * Description
+ * @method crossfade
+ * @param {} options
+ * @return 
+ */
 $.fn.crossfade = function (options) {
 
   var defaults = {
@@ -10,6 +16,11 @@ $.fn.crossfade = function (options) {
     , $current = $($items[0])
     , $next = false;
 
+  /**
+   * Description
+   * @method fade
+   * @return 
+   */
   function fade() {
     $next = $current.next().length ? $current.next() : $current.prevAll().last();
     $next.addClass('active');
@@ -21,11 +32,21 @@ $.fn.crossfade = function (options) {
 
 }
 
+/**
+ * Description
+ * @method rendered
+ * @return 
+ */
 Template.homeBackground.rendered = function () {
   $('.crossfade').crossfade();
 };
 
 Template.home.events({
+  /**
+   * Description
+   * @param {} e
+   * @return Literal
+   */
   'click a.anchor': function (e) {
     e.preventDefault();
     var target = $(e.currentTarget).attr("href");

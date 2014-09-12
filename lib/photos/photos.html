@@ -8,28 +8,25 @@
         </div>
       </div>
     </div>
-    <div class="container">
-		<h1>Photos</h1>
-		{{#each items}}
-			{{> thumbnail}}
-		{{/each}}
+    <div>
+	  {{#each files}}
+	    <a id="preview-{{id}}" class="preview" href="/photos/{{_id}}">
+		  {{#if thumbnailLink}}
+			<img src="{{thumbnailLink}}" />
+		  {{/if}}
+		</a>
+	  {{/each}}
 	</div>
   </article>
-</template>
-
-<template name="thumbnail">
-	<a id="thumbnail-{{id}}" class="thumbnail" href="/photo/{{id}}">
-		<img src="{{thumbnailLink}}" />
-		<div class="description">
-			{{description}}
-		</div>
-	</a>
+  {{> photo}}
 </template>
 
 <template name="photo">
-	<div id="photo" style="background-image: url('{{viewUrl}}')">
-		<div class="description">
-			{{description}}
-		</div>
-	</div>
+  <div id="photo" style="background-image: url('{{selectedPhoto.fullLink}}')">
+	{{#if selectedPhoto.description}}
+      <div class="description">
+		{{selectedPhoto.description}}
+	  </div>
+    {{/if}}
+  </div>
 </template>
