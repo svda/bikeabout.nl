@@ -7,7 +7,7 @@
 		"auth" : {
 			"client_id" : "118372928418-b8aova0noqu3tmfntepi0d6kfrasjlvo.apps.googleusercontent.com",
 			"client_secret" : "suvxX-mS91kmPPLiSmy_dXh8",
-			"redirect_url" : "http://localhost:3000/googleapi/authorize"
+			"redirect_url" : "http://bikeabout.nl/googleapi/authorize"
 		},
 		"drive" : {
 			"rootfolder" : "0B4XNjTYx1cXLcEUyZXBfb0RmNVk"
