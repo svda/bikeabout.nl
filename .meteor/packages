@@ -15,11 +15,11 @@ iron-router-progress
 less
 percolatestudio-migrations
 accounts-password
+accounts-ui
 http
 c2o-core
 c2o-tracker
 c2o-seo
 c2o-tumblrfeed
 c2o-triplogger
-accounts-ui
 c2o-googleapis
