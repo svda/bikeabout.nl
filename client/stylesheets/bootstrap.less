@@ -1,7 +1,8 @@
-@import "/packages/c2o-core/client/stylesheets/core.lessimport";
-@import "/packages/c2o-tumblrfeed/client/stylesheets/tumblrfeed.import.less";
-@import "/packages/c2o-triplogger/client/stylesheets/triplogger.import.less";
+@import "/packages/c2o:core/client/stylesheets/core.lessimport";
+@import "/packages/c2o:tumblrfeed/client/stylesheets/tumblrfeed.import.less";
+@import "/packages/c2o:triplogger/client/stylesheets/triplogger.import.less";
 @import "icons.lessimport";
+
 
 @gray-lighter:          #CCCCCC;
 @gray-lightest:         #F4F4F4;
@@ -204,6 +205,14 @@ time {
   padding: 20px 10px;
   color: #fff;
   background-color: #121212;
+}
+
+aside {
+  color: #999;
+
+  strong {
+    color: @gray;
+  }
 }
 
 @media (min-width: @screen-sm-min) {
@@ -648,6 +657,12 @@ body.hide-hints {
   }
 }
 
+.view-about {
+  .jumbotron {
+    background-color: @blue;
+  }
+}
+
 .view-viewTumblrFeed {
   #tumblrfeed {
     background-color: @gray-lightest;
@@ -710,8 +725,8 @@ body.hide-hints {
 }
 
 #photo {
-  .cover;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   opacity: 0;
   z-index: -1;
   cursor: pointer;
