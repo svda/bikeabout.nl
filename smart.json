@@ -27,6 +27,10 @@
     "c2o:googleapis": {
       "git": "https://github.com/click2open/c2o-googleapis.git",
       "branch": "master"
+    },
+    "c2o:gallery": {
+      "git": "https://github.com/click2open/c2o-gallery.git",
+      "branch": "master"
     }
   }
 }
