@@ -1,41 +1,36 @@
 {
   "packages": {
-    "c2o-core": {
+    "c2o:core": {
       "git": "https://github.com/click2open/c2o-core.git",
       "branch": "master"
     },
-    "c2o-seo": {
+    "c2o:seo": {
       "git": "https://github.com/click2open/c2o-seo.git",
       "branch": "master"
     },
-    "c2o-module": {
+    "c2o:module": {
       "git": "https://github.com/click2open/c2o-module.git",
       "branch": "master"
     },
-    "c2o-tracker": {
+    "c2o:tracker": {
       "git": "https://github.com/click2open/c2o-tracker.git",
       "branch": "master"
     },
-    "c2o-content": {
-      "git": "https://github.com/click2open/c2o-content.git",
-      "branch": "master"
-    },
-    "c2o-tumblrfeed": {
+    "c2o:tumblrfeed": {
       "git": "https://github.com/click2open/c2o-tumblrfeed.git",
       "branch": "master"
     },
-    "c2o-triplogger": {
+    "c2o:triplogger": {
       "git": "https://github.com/click2open/c2o-triplogger.git",
       "branch": "master"
     },
-    "c2o-googleapis": {
+    "c2o:googleapis": {
       "git": "https://github.com/click2open/c2o-googleapis.git",
       "branch": "master"
     },
-    "iron-router": {
-      "version": "0.8.2"
-    },
-    "iron-router-progress": {},
-    "percolatestudio-migrations": {}
+    "c2o:gallery": {
+      "git": "https://github.com/click2open/c2o-gallery.git",
+      "branch": "master"
+    }
   }
 }
