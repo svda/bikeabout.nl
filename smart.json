@@ -1,42 +1,25 @@
 {
   "packages": {
-    "c2o-core": {
-      "git": "https://github.com/click2open/c2o-core.git",
-      "branch": "master"
+    "c2o:core": {
+      "path": "/usr/local/var/www/meteor/packages/c2o:core"
     },
-    "c2o-seo": {
-      "git": "https://github.com/click2open/c2o-seo.git",
-      "branch": "master"
+    "c2o:seo": {
+      "path": "/usr/local/var/www/meteor/packages/c2o:seo"
     },
-    "c2o-module": {
-      "git": "https://github.com/click2open/c2o-module.git",
-      "branch": "master"
+    "c2o:module": {
+      "path": "/usr/local/var/www/meteor/packages/c2o:module"
     },
-    "c2o-tracker": {
-      "git": "https://github.com/click2open/c2o-tracker.git",
-      "branch": "master"
+    "c2o:tracker": {
+      "path": "/usr/local/var/www/meteor/packages/c2o:tracker"
     },
-    "c2o-content": {
-      "git": "https://github.com/click2open/c2o-content.git",
-      "branch": "master"
+    "c2o:tumblrfeed": {
+      "path": "/usr/local/var/www/meteor/packages/c2o:tumblrfeed"
     },
-    "c2o-tumblrfeed": {
-      "git": "https://github.com/click2open/c2o-tumblrfeed.git",
-      "branch": "master"
+    "c2o:googleapis": {
+      "path": "/usr/local/var/www/meteor/packages/c2o:googleapis"
     },
-    "c2o-triplogger": {
-      "git": "https://github.com/click2open/c2o-triplogger.git",
-      "branch": "master"
-    },
-    "c2o-googleapis": {
-      "git": "https://github.com/click2open/c2o-googleapis.git",
-      "branch": "master"
-    },
-    "iron-router": {
-      "git": "https://github.com/EventedMind/iron-router",
-      "branch": "devel"
-    },
-    "iron-router-progress": {},
-    "percolatestudio-migrations": {}
+    "c2o:triplogger": {
+      "path": "/usr/local/var/www/meteor/packages/c2o:triplogger"
+    }
   }
 }
