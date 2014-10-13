@@ -33,8 +33,7 @@
       "branch": "master"
     },
     "iron-router": {
-      "git": "https://github.com/EventedMind/iron-router",
-      "branch": "devel"
+      "version": "0.8.2"
     },
     "iron-router-progress": {},
     "percolatestudio-migrations": {}
