@@ -1,0 +1,22 @@
+{
+  "servers": [
+    {
+      "host": "130.211.77.163",
+      "username": "root",
+      "pem": "~/.ssh/google_compute_engine"
+    }
+  ],
+  "setupMongo": true,
+  "setupNode": true,
+  "nodeVersion": "0.10.33",
+  "setupPhantom": true,
+  "appName": "meteor",
+  "app": "/usr/local/var/www/bikeabout.nl",
+  "env": {
+    "PORT": "3000",
+    "ROOT_URL": "http://bikeabout.nl",
+    "MONGO_URL": "mongodb://localhost/bikeabout"
+    //"MAIL_URL": ""
+  },
+  "deployCheckWaitTime": 30
+}

@@ -1,11 +1,9 @@
+UsageTracker.register(GoogleAnalytics);
+
+/*
 var scriptLoaded = false,
     commentsShown = false;
 
-/**
- * Description
- * @method rendered
- * @return 
- */
 Template.tumblrFeedPost.rendered = function () {
   commentsShown = false;
   if(!scriptLoaded) {
@@ -15,11 +13,6 @@ Template.tumblrFeedPost.rendered = function () {
     resetScript();
   }
 
-  /**
-   * Description
-   * @method loadScript
-   * @return 
-   */
   function loadScript () {
     var thread = $('<div id="disqus_thread">').appendTo('article.post');
     var disqus_shortname = Meteor.settings.public.disqus.shortname; // required: replace example with your forum shortname
@@ -30,19 +23,9 @@ Template.tumblrFeedPost.rendered = function () {
     commentsShown = true;
   }
 
-  /**
-   * Description
-   * @method resetScript
-   * @return 
-   */
   function resetScript() {
     DISQUS.reset({
       reload: true,
-      /**
-       * Description
-       * @method config
-       * @return 
-       */
       config: function () {  
         this.page.identifier = Meteor.settings.public.disqus.shortname;  
         this.page.url = "http://example.com/#!newthread";
@@ -56,32 +39,4 @@ Template.tumblrFeedPost.rendered = function () {
     }
   });
 };
-
-Template.layout.events({
-  /**
-   * Description
-   * @param {} e
-   * @return 
-   */
-  'click #washi': function (e) {
-    $('body').removeClass('menu-open');
-  }
-});
-
-/**
- * Description
- * @method rendered
- * @return 
- */
-Template.menu.rendered = function () {
-  Meteor.defer(function() {
-    $('.menu.animated').addClass('animate-in');
-  });
-  $('#primary-menu-btn').on('click', function (e) {
-    $('body').addClass('hide-hints');
-  })
-};
-
-$('a[role=navigation]').on( 'click', function (e) {
-  $('html,body').animate({scrollTop: $('body').offset().top});
-});
+*/

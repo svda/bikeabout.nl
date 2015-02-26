@@ -1,22 +1,33 @@
+Template.layout.rendered = function() {
+  this.find('#shoji')._uihooks = {
+    insertElement: function (node, next) {
+      $(node)
+        .hide()
+        .insertBefore(next)
+        .fadeIn();
+    },
+    removeElement: function (node) {
+      $(node).fadeOut(function () {
+        $(this).remove();
+      });
+    }
+  }
+}
+
 Template.layout.helpers({
-  /**
-   * Description
-   * @method currentView
-   * @return 
-   */
-  currentView: function () {
-    if( Router.current() !== null )
-      return Router.current().route.name;
+  classes: function () {
+    var route, str;
+    str = '';
+    route = Router && Router.current() && Router.current().route;
+    if (route)
+      str += 'view-' + route.getName();
+    return str;
   }
 });
 
 Template.layout.events({
-  /**
-   * Description
-   * @param {} e
-   * @return 
-   */
-  'click #main-overlay': function (e) {
+  'click #washi': function (e) {
     $('body').removeClass('menu-open');
+    $('.menu.animated').removeClass('animate-in');
   }
 });

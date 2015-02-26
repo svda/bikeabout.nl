@@ -28,12 +28,8 @@ Template.header.helpers({
 });
 
 Template.header.events({
-  /**
-   * Description
-   * @param {} e
-   * @return 
-   */
-  'click #primary-menu-btn': function (e) {
-      $('body').toggleClass('menu-open primary-menu-open');
+  'click #primary-menu-btn': function () {
+    $('.menu.animated').addClass('animate-in');
+    $('body').addClass('hide-hints').toggleClass('menu-open primary-menu-open');
   }
 });

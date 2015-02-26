@@ -3,26 +3,28 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-standard-app-packages
-http
+meteor-platform
 less
 accounts-password
 accounts-ui
 jquery
-backbone
-underscore
-spiderable
-coffeescript
-mrt:moment
+fastclick
 iron:router
-mrt:iron-router-progress
+# multiply:iron-router-progress
 percolatestudio:percolatestudio-migrations
-c2o:core
-c2o:tracker
-c2o:seo
-c2o:tumblrfeed
-c2o:triplogger
-c2o:gallery
-c2o:googleapis
+spiderable
 gadicohen:phantomjs
+nemo64:bootstrap
+meteorhacks:kadira
+
+# Own packages
+nbh:user
+nbh:seo
+nbh:settings
+nbh:tumblrfeed
+nbh:triplogger
+nbh:usage-tracker
+nbh:googledrive
+
+
 

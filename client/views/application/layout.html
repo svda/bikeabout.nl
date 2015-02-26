@@ -1,9 +1,10 @@
 <template name="layout">
 
-  <div id="layout" class="view-{{currentView}}">
+  <div id="layout" class="{{classes}}">
     {{> menu}}
     <div id="washi"></div>
     <main id="shoji">
+      <a id="top" name="top"></a>
       {{> header}}
       {{> yield}}
       {{> footer}}
