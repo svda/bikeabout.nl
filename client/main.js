@@ -1,5 +1,10 @@
 UsageTracker.register(GoogleAnalytics);
 
+$('a[role=navigation]').on('click', function (e) {
+  console.log('click');
+  $('#shoji').animate({scrollTop: $('#shoji').offset().top});
+});
+
 /*
 var scriptLoaded = false,
     commentsShown = false;
